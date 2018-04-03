@@ -1,0 +1,50 @@
+<div id="container">
+  <form name=iList id="form-add-todo">
+
+    <table  style="width:100%">
+      <div *ngIf="!title">
+        Title is required.
+      </div>
+      <tr><td width="50%"><b>Title</b></td>
+        <td><input type=text name="title" [(ngModel)]="title" ></td>
+      </tr>
+      <div *ngIf="!item">
+        Item is required.
+      </div>
+      <tr><td width="50%"><b>Item</b></td>
+        
+        <td><input type=text name=item [(ngModel)]="item"></td>
+      </tr>
+      <div *ngIf="!author">
+        Title is required.
+      </div>
+      <tr>
+        <td><b>Author</b></td>
+        <td><input type=text name=author [(ngModel)]="author"></td>
+      </tr>
+     
+      <tr>
+        <td><b>Date</b></td>
+        <td><input type=date name=date id="date-input" [(ngModel)]="date"></td>
+      </tr>
+    </table>
+    <br>
+    <button (click)="Add(title, item, author, date)"> Save</button>
+     <br>
+    <br>
+  </form>
+  
+  <div id="display-to-do" >
+  <div *ngFor="let item of itemList" >
+    <h3 class="heading"> {{ item.title }} </h3>
+    <p class="content">
+      {{ item.item }} <br>
+      <span class="created" >created by:</span>{{ item.author }}<br>
+      <span class="created">date:</span>{{ item.date }}
+    </p>
+    <br>
+  </div>
+  </div>
+  </div>
+
+

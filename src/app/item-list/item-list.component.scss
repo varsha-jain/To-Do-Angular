@@ -1,0 +1,35 @@
+#display-to-do{
+    margin-left: 55px;
+    margin-top: 50px;
+    padding: 10px;
+    border-right: orangered 2px solid;
+    width: 40%;
+    height: 100%;
+}
+
+#display-to-do .heading{
+    margin: 0px;
+    padding: 0px;
+    font-size: 22px;
+}
+
+#display-to-do .content{
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+}
+.created{
+    font-style: italic;
+    font-family: 'Courgette', cursive;
+    font-size: 15px;
+}
+#container {
+  position: absolute;
+  top: 205px;
+  right: 100px;
+  margin-left: 15px;
+}
+
+#table, th, td {
+  border: 1px solid black;
+}
